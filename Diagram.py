@@ -12,7 +12,7 @@ class Diagram:
         #lst = list(self.dict_criterions.values())
         fulled = len(list(filter(lambda x: x, self.dict_criterions.values())))
         fulled = fulled/all_diagram
-        print(f'{"|" * int(fulled*100)}{"-"*int((1-fulled)*100)}')
+        print(f'Progress: {"|" * int(fulled*100)}{"-"*int((1-fulled)*100)}')
 
     def show_criterions(self):
         for i, j in self.dict_criterions.items():
@@ -27,6 +27,21 @@ english_Diagram = Diagram('English')
 english_Diagram.add('Present Simple', True)
 english_Diagram.add('Present Continuous')
 english_Diagram.add('Present Perfect Continuous')
+
+english_Diagram.add('skill1', True)
+english_Diagram.add('skill2', True)
+english_Diagram.add('skill3', True)
+english_Diagram.add('skill4')
+english_Diagram.add('skill5', True)
+english_Diagram.add('skill6')
+english_Diagram.add('skill7')
+english_Diagram.add('skill8', True)
+english_Diagram.add('skill9')
+english_Diagram.add('skill10', True)
+english_Diagram.add('skill11')
+english_Diagram.add('skill12', True)
+
+
 print()
 print(f'Навык: {english_Diagram.name}')
 print()
@@ -34,6 +49,9 @@ english_Diagram.show_criterions()
 english_Diagram.show_diagram()
 
 english_Diagram.change_status_of_criterion('Present Continuous', True)
+english_Diagram.change_status_of_criterion('skill11', True)
+english_Diagram.change_status_of_criterion('skill14', True)
+english_Diagram.change_status_of_criterion('skill17', True)
 print()
 english_Diagram.show_criterions()
 
