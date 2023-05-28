@@ -62,14 +62,14 @@ import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
 
-skills = [i.name + f' ({i.progress_percent()}%)' for i in Skill.skills]
+skills = [i.name + f'\n({i.progress_percent()}%)' for i in Skill.skills]
 counts = [i.progress_percent() for i in Skill.skills]
 
-bar_colors = []
+bar_colors = list(map(lambda x: 'tab:green' if x==100 else 'firebrick', counts))
 ax.axis([None, None, 0, 100])
 
 # str_label = '\n\n'.join(english.dict_criterions.keys()) # легенда, отображающая элементы навыка
-ax.bar(skills, counts, align='center')
+ax.bar(skills, counts, color=bar_colors, align='center')
 
 ax.set_ylabel('Прогресс изучения, %')
 ax.set_title('Диаграммы навыков')
