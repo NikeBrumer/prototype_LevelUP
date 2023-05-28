@@ -6,7 +6,6 @@ class Skill:
         cls.skills.append(obj)
         return obj
 
-
     def __init__(self, name):
         self.dict_criterions = {}
         self.name = name
@@ -56,10 +55,8 @@ oop.add('Полиморфизм')
 oop.add('Исключения')
 oop.add('Менеджеры контекста')
 
-
 dream = Skill('Сон 12 часов\nв сутки')
 dream.add('Сонливость', True)
-
 
 import matplotlib.pyplot as plt
 
